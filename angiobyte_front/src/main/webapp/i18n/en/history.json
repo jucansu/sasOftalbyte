@@ -1,0 +1,45 @@
+{
+    "history": {
+        "title": "Patients list",
+        "patients": {
+            "history": "History",
+            "nuhsa": "Nuhsa",
+            "name": "Name",
+            "date": "Date",
+            "doctor": "Doctor",
+            "visit": "Visit",
+            "historical": "Historical",
+            "city": "City",
+            "address": "Address",
+            "date_birth": "Birth Date",
+            "notes": "Notes",
+            "origin": "Origin",
+            "proffesion": "Proffesion",
+            "comparison": "Images comparison"
+        },
+        "more_info_label": "More information",
+        "more_button": "View more",
+        "nuhsa_search_label": "Nuhsa:",
+        "nuhsa_search_button": "Search",
+        "detail": {
+            "title": "Patient's detail",
+            "button1": "Campimetría",
+            "button2": "Topografía",
+            "button3": "OCT Posterior",
+            "button4": "OCT Anterior/HRT",
+            "button5": "OCT Post. Tritón",
+            "button6": "OCT 2 Maestro",
+            "button7": "Retinografía",
+            "button8": "Angiografía",
+            "button9": "Contaje Células",
+            "button10": "Biometrías",
+            "button11": "Polo Anterior",
+            "button12": "Paquimetría"
+        },
+        "comparison": {
+            "title": "Images comparison",
+            "visit": "Visit",
+            "date": "Date"
+        }
+    }
+}

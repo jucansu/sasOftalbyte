@@ -1,0 +1,18 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "nativeLanguage": "es"
+    },
+    "jhipsterVersion": "4.8.2",
+    "baseName": "Angiobyte",
+    "clientFramework": "angularX",
+    "useSass": false,
+    "enableTranslation": true,
+    "nativeLanguage": "es",
+    "languages": [
+      "es",
+      "en"
+    ],
+    "clientPackageManager": "yarn"
+  }
+}

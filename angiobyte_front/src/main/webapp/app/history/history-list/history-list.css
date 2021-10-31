@@ -1,0 +1,30 @@
+#menu-outer {
+	height: 84px;
+}
+
+.table {
+	display: table;   /* Allow the centering to work */
+	margin: 0 auto;
+}
+
+ul#horizontal-list {
+	min-width: 696px;
+	list-style: none;
+    padding-top: 20px;
+    text-align: center;
+}
+
+ul#horizontal-list li {
+	display: inline;
+}
+
+button {
+	cursor: pointer;
+}
+button:disabled {
+	cursor: default;
+}
+
+.filter {
+	width: 50%;
+}

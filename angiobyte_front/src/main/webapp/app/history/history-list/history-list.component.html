@@ -1,0 +1,67 @@
+<!-- <ol>
+    <li *ngFor="let h of history">
+        <span *ngIf="h">{{h.nombre}}</span>
+    </li>
+</ol> -->
+
+<div>
+    <h2>
+        <span jhiTranslate="history.title">Users</span>
+        <div class=" float-right">
+            <table>
+                <span jhiTranslate="history.nuhsa_search_label">Nuhsa:</span>
+                <tr>
+                    <th style="padding-right: 0.5em;">
+                        <input type="text" [(ngModel)]="nuhsa_id" class="form-control">
+                    </th>
+                    <th>
+                        <button type="submit" class="btn" [ngClass]="(!nuhsa_id) ? 'btn-default' : 'btn-primary'" [disabled]="!nuhsa_id"
+                        [routerLink]="['../nuhsa', nuhsa_id, 'detail']"  jhiTranslate="history.nuhsa_search_button">Search</button>
+                    </th>
+                </tr>
+            </table>
+        </div>
+    </h2>
+    <br>
+    <!-- <div>
+        <button type="submit" [disabled]="false" class="btn btn-primary" jhiTranslate="password.form.button">Save</button>
+    </div> -->
+    <div class="table-responsive" *ngIf="history">
+
+        <span jhiTranslate="logs.filter">Filter</span> <input type="text" [(ngModel)]="filter" class="form-control">
+        <br>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <!--[callback]="transition.bind(this)">-->
+                    <th><span jhiTranslate="history.patients.nuhsa">Nuhsa</span></th>
+                    <th><span jhiTranslate="history.patients.history">Historial</span></th>
+                    <th><span jhiTranslate="history.patients.name">Nombre</span></th>
+                    <th><span jhiTranslate="history.patients.date">Fecha</span></th>
+                    <th><span jhiTranslate="history.patients.doctor">Doctor</span></th>
+                    <th><span jhiTranslate="history.patients.visit">Visita</span></th>
+                    <th style="text-align: center"><span jhiTranslate="history.more_info_label">Más información</span></th>
+                </tr>
+            </thead>
+            <tbody *ngIf="history">
+                <tr *ngFor="let h of (history | pureFilter:filter:'nombre'); trackBy: nuhsa">
+                    <td>{{h.nuhsa}}</td>
+                    <td>{{h.historial}}</td>
+                    <td>{{h.nombre}}</td>
+                    <td>{{h.fecha}}</td>
+                    <td>{{h.doctor}}</td>
+                    <td>{{h.visita}}</td>
+                    <td align="center"><button type="submit" class="btn btn-primary" [routerLink]="['../nuhsa', h.nuhsa, 'detail']" jhiTranslate="history.more_button">Más</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="history">
+        <div class="row justify-content-center">
+            <jhi-item-count [page]="page" [total]="totalItems" [itemsPerPage]="itemsPerPage"></jhi-item-count>
+        </div>
+        <!-- <div class="row justify-content-center">
+             <ngb-pagination [collectionSize]="totalItems" [(page)]="page" (pageChange)="loadPage(page)"></ngb-pagination> 
+        </div> -->
+    </div>
+</div>

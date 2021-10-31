@@ -1,0 +1,125 @@
+<div>
+    <h2>
+        <span jhiTranslate="history.detail.title">Users</span>
+    </h2>
+    <br>
+    <div *ngIf="user">
+        <div class="center-div">
+            <button type="submit" [disabled]="currentUserDetail && !currentUserDetail.campi" class="btn" [ngClass]="(currentUserDetail && !currentUserDetail.campi) ? 'btn-default' : 'btn-primary'"
+                [routerLink]="['../..', user.nuhsa, 'images','campi']" jhiTranslate="history.detail.button1">Campimetría</button>
+            <button type="submit" [disabled]="currentUserDetail && !currentUserDetail.topo" class="btn" [ngClass]="(currentUserDetail && !currentUserDetail.topo) ? 'btn-default' : 'btn-primary'"
+                [routerLink]="['../..', user.nuhsa, 'images', 'topo']" jhiTranslate="history.detail.button2">Topografía</button>
+            <button type="submit" [disabled]="currentUserDetail && !currentUserDetail.octp" class="btn" [ngClass]="(currentUserDetail && !currentUserDetail.octp) ? 'btn-default' : 'btn-primary'"
+                [routerLink]="['../..', user.nuhsa, 'images', 'octp']" jhiTranslate="history.detail.button3">OCT Posterior</button>
+            <button type="submit" [disabled]="currentUserDetail && !currentUserDetail.octa" class="btn" [ngClass]="(currentUserDetail && !currentUserDetail.octa) ? 'btn-default' : 'btn-primary'"
+                [routerLink]="['../..', user.nuhsa, 'images', 'octa']" jhiTranslate="history.detail.button4">OCT Anterior/HRT</button>
+            <button type="submit" [disabled]="currentUserDetail && !currentUserDetail.otra1" class="btn" [ngClass]="(currentUserDetail && !currentUserDetail.otra1) ? 'btn-default' : 'btn-primary'"
+                [routerLink]="['../..', user.nuhsa, 'images', 'otra1']" jhiTranslate="history.detail.button5">OCT Post. Tritón</button>
+            <button type="submit" [disabled]="currentUserDetail && !currentUserDetail.otra2" class="btn" [ngClass]="(currentUserDetail && !currentUserDetail.otra2) ? 'btn-default' : 'btn-primary'"
+                [routerLink]="['../..', user.nuhsa, 'images', 'otra2']" jhiTranslate="history.detail.button6">OCT 2 Maestro</button>
+        </div>
+        <div class="center-div">
+            <button type="submit" [disabled]="currentUserDetail && !currentUserDetail.reti" class="btn" [ngClass]="(currentUserDetail && !currentUserDetail.reti) ? 'btn-default' : 'btn-primary'"
+                [routerLink]="['../..', user.nuhsa, 'images', 'reti']" jhiTranslate="history.detail.button7">Retinografía</button>
+            <button type="submit" [disabled]="currentUserDetail && !currentUserDetail.angi" class="btn" [ngClass]="(currentUserDetail && !currentUserDetail.angi) ? 'btn-default' : 'btn-primary'"
+                [routerLink]="['../..', user.nuhsa, 'images', 'angi']" jhiTranslate="history.detail.button8">Angiografía</button>
+            <button type="submit" [disabled]="currentUserDetail && !currentUserDetail.conta" class="btn" [ngClass]="(currentUserDetail && !currentUserDetail.conta) ? 'btn-default' : 'btn-primary'"
+                [routerLink]="['../..', user.nuhsa, 'images', 'conta']" jhiTranslate="history.detail.button9">Contaje Células</button>
+            <button type="submit" [disabled]="currentUserDetail && !currentUserDetail.bio" class="btn" [ngClass]="(currentUserDetail && !currentUserDetail.bio) ? 'btn-default' : 'btn-primary'"
+                [routerLink]="['../..', user.nuhsa, 'images', 'bio']" jhiTranslate="history.detail.button10">Biometrías</button>
+            <button type="submit" [disabled]="currentUserDetail && !currentUserDetail.polo" class="btn" [ngClass]="(currentUserDetail && !currentUserDetail.polo) ? 'btn-default' : 'btn-primary'"
+                [routerLink]="['../..', user.nuhsa, 'images', 'polo']" jhiTranslate="history.detail.button11">Polo Anterior</button>
+            <button type="submit" [disabled]="currentUserDetail && !currentUserDetail.paqui" class="btn" [ngClass]="(currentUserDetail && !currentUserDetail.paqui) ? 'btn-default' : 'btn-primary'"
+                [routerLink]="['../..', user.nuhsa, 'images', 'paqui']" jhiTranslate="history.detail.button12">Paquimetría</button>
+        </div>
+    </div>
+    <div *ngIf="user">
+        <div class="right-div">
+            <h2>
+                <span jhiTranslate="history.patients.nuhsa">Nuhsa</span> [
+                <b>{{user.nuhsa}}</b>]
+            </h2>
+            <br>
+            <dl class="row-md jh-entity-details">
+                <dt>
+                    <span jhiTranslate="history.patients.name">Nombre</span>
+                </dt>
+                <dd>{{user.nombre}}</dd>
+                <dt>
+                    <span jhiTranslate="history.patients.date_birth">Fecha Nac.</span>
+                </dt>
+                <dd>{{user.fechanac}}</dd>
+                <dt>
+                    <span jhiTranslate="history.patients.address">Dirección</span>
+                </dt>
+                <dd>{{user.direccion}}</dd>
+                <dt>
+                    <span jhiTranslate="history.patients.city">Ciudad</span>
+                </dt>
+                <dd>{{user.ciudad}}</dd>
+                <dt>
+                    <span jhiTranslate="history.patients.proffesion">Profesión</span>
+                </dt>
+                <dd>{{user.profesion}}</dd>
+                <dt>
+                    <span jhiTranslate="history.patients.date">Fecha</span>
+                </dt>
+                <dd>{{user.fecha | date:'dd/MM/yy' }}</dd>
+                <dt>
+                    <span jhiTranslate="history.patients.visit">Visita</span>
+                </dt>
+                <dd>{{user.visita}}</dd>
+            </dl>
+            <button type="submit" routerLink="/nuhsa" class="btn btn-info">
+                <span class="fa fa-arrow-left"></span>&nbsp;
+                <span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+        </div>
+        <div class="left-div">
+            <div class="table-responsive" *ngIf="detail">
+                <h2 class="visit-title">Visitas</h2>
+                <button type="submit" class="btn btn-primary comparison-button" [routerLink]="['../', 'comparison', 'campi']" jhiTranslate="history.patients.comparison">Comparativa de imágenes</button>
+                <br>
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <!--[callback]="transition.bind(this)">-->
+                            <th>
+                                <span jhiTranslate="history.patients.visit">Visita</span>
+                            </th>
+                            <th>
+                                <span jhiTranslate="history.patients.date">Fecha</span>
+                            </th>
+                            <th>
+                                <span>Nota</span>
+                            </th>
+                            <th>
+                                <span jhiTranslate="history.patients.doctor">Doctor</span>
+                            </th>
+                            <th>
+                                <span>Hospital</span>
+                            </th>
+                            <th>
+                                <span>Seleccionar</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody *ngIf="detail">
+                        <tr *ngFor="let h of (detail); let i = index; trackBy: nuhsa">
+                            <td>{{h.visita}}</td>
+                            <td>{{h.fecha}}</td>
+                            <td>{{h.nota}}</td>
+                            <td>{{h.doctor}}</td>
+                            <td>{{h.hospital}}</td>
+                            <td align="center">
+                                <button type="submit" class="btn btn-primary" (click)="updateCurrentUserDetail(i)">Seleccionar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</div>

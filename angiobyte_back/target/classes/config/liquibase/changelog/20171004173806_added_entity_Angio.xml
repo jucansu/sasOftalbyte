@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.5.xsd
+                        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+
+    <property name="now" value="now()" dbms="h2"/>
+
+    <property name="now" value="GETDATE()" dbms="mssql"/>
+
+    <property name="floatType" value="float4" dbms="postgresql, h2"/>
+    <property name="floatType" value="float" dbms="mysql, oracle, mssql"/>
+
+    <!--
+        Added the entity Angio.
+    -->
+    <changeSet id="20171004173806-1" author="jhipster">
+        <createTable tableName="angio">
+            <column name="id" type="bigint" autoIncrement="${autoIncrement}">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="historial" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="nombre" type="varchar(80)">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="visita" type="integer">
+                <constraints nullable="false" />
+            </column>
+
+            <column name="direccion" type="varchar(100)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="fechanac" type="date">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="fecha" type="date">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="notas" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="ciudad" type="varchar(80)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="procedencia" type="varchar(80)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="profesion" type="varchar(80)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="antecedentes" type="varchar(250)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="i_5" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="i_6" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="i_7" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="i_8" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="i_9" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="i_10" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="i_11" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="i_12" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="i_13" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="i_14" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="i_15" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="i_16" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="imaginet" type="integer">
+                <constraints nullable="true" />
+            </column>
+
+            <column name="nuhsa" type="varchar(255)">
+                <constraints nullable="true" />
+            </column>
+
+            <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
+        </createTable>
+        
+    </changeSet>
+    <!-- jhipster-needle-liquibase-add-changeset - JHipster will add changesets here, do not remove-->
+</databaseChangeLog>

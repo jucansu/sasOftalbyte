@@ -1,0 +1,139 @@
+<div>
+    <div class="outter_modal" *ngIf="spinner">
+        <div class="spinner_modal">
+            <div class="spinner">
+                <img src="../../../content/images/spinner.gif" />
+            </div>
+        </div>
+    </div>
+    <div class="outter_modal" *ngIf="popUp === true" (click)="closePopUp($event)">
+        <div class="modal">
+            <img [src]="'data:image/png;base64,' + izqImageComparison" (click)="enablingZoom(true, 'izq')" *ngIf="izqImageComparison">
+        </div>
+        <div class="modal">
+                <figure *ngIf="enableZoomIzq" class="zoom" (mousemove)="zoom($event, 'izq')" [style.backgroundImage]="'url('+ 'data:image/png;base64,' + izqImageComparison +')'"
+                    (click)="enablingZoom(false, 'izq')">
+                    <img [src]="'data:image/png;base64,' + izqImageComparison" />
+                </figure>
+            </div>
+        <div class="modal2">
+            <img [src]="'data:image/png;base64,' + derImageComparison" (click)="enablingZoom(true, 'der')" *ngIf="derImageComparison">
+        </div>
+        <div class="modal2">
+            <figure *ngIf="enableZoomDer" class="zoom" (mousemove)="zoom($event, 'der')" [style.backgroundImage]="'url('+ 'data:image/png;base64,' + derImageComparison +')'"
+                (click)="enablingZoom(false, 'der')">
+                <img [src]="'data:image/png;base64,' + derImageComparison" />
+            </figure>
+        </div>
+    </div>
+
+    <div>
+        <h2>
+            <span jhiTranslate="history.comparison.title">Comparativa de imágenes</span>
+        </h2>
+    </div>
+    <div>
+        <div class="images-box">
+            <div class="visita-izq">
+                <h4>
+                    <b>
+                        <span jhiTranslate="history.comparison.visit">Visita N</span>
+                    </b> {{(izqDetails) ? izqDetails.visit : ''}}</h4>
+                <h4>
+                    <b>
+                        <span jhiTranslate="history.comparison.date">Fecha</span>
+                    </b> {{(izqDetails) ? izqDetails.date : ''}}</h4>
+            </div>
+            <div class="visita-der">
+                <h4>
+                    <b>
+                        <span jhiTranslate="history.comparison.visit">Visita N</span>
+                    </b> {{(derDetails) ? derDetails.visit : ''}}</h4>
+                <h4>
+                    <b>
+                        <span jhiTranslate="history.comparison.date">Fecha</span>
+                    </b> {{(derDetails) ? derDetails.date : ''}}</h4>
+            </div>
+            <div [ngClass]="(boxSelection==='izq')?'w50 img-container box-active':'w50 img-container'">
+                <img [src]="'data:image/png;base64,' + izqImageComparison" alt="index" (click)="openPopUp('data:image/png;base64,' + izqImageComparison)"
+                    *ngIf="izqImageComparison">
+            </div>
+            <div [ngClass]="(boxSelection==='der')?'w50 derecho img-container box-active':'w50 derecho img-container'">
+                <img [src]="'data:image/png;base64,' + derImageComparison" alt="index" (click)="openPopUp('data:image/png;base64,' + derImageComparison)"
+                    *ngIf="derImageComparison">
+            </div>
+        </div>
+    </div>
+    <div class="control-bar">
+        <div class="switch-button" (click)="changeBox()">
+            Cambiar
+        </div>
+        <div class="buttons-div">
+            <div class="center-div">
+                <button type="submit" [disabled]="!availableButtons.campi" class="btn" [ngClass]="(!availableButtons.campi) ? 'btn-default' : 'btn-primary'"
+                    jhiTranslate="history.detail.button1" (click)="changeType('campi')">Campimetría</button>
+                <button type="submit" [disabled]="!availableButtons.topo" class="btn" [ngClass]="(!availableButtons.topo) ? 'btn-default' : 'btn-primary'"
+                    jhiTranslate="history.detail.button2" (click)="changeType('topo')">Topografía</button>
+                <button type="submit" [disabled]="!availableButtons.octp" class="btn" [ngClass]="(!availableButtons.octp) ? 'btn-default' : 'btn-primary'"
+                    jhiTranslate="history.detail.button3" (click)="changeType('octp')">OCT Posterior</button>
+                <button type="submit" [disabled]="!availableButtons.octa" class="btn" [ngClass]="(!availableButtons.octa) ? 'btn-default' : 'btn-primary'"
+                    jhiTranslate="history.detail.button4" (click)="changeType('octa')">OCT Anterior/HRT</button>
+                <button type="submit" [disabled]="!availableButtons.otra1" class="btn" [ngClass]="(!availableButtons.otra1) ? 'btn-default' : 'btn-primary'"
+                    jhiTranslate="history.detail.button5" (click)="changeType('otra1')">OCT Post. Tritón</button>
+                <button type="submit" [disabled]="!availableButtons.otra2" class="btn" [ngClass]="(!availableButtons.otra2) ? 'btn-default' : 'btn-primary'"
+                    jhiTranslate="history.detail.button6" (click)="changeType('otra2')">OCT 2 Maestro</button>
+            </div>
+            <div class="center-div">
+                <button type="submit" [disabled]="!availableButtons.reti" class="btn" [ngClass]="(!availableButtons.reti) ? 'btn-default' : 'btn-primary'"
+                    jhiTranslate="history.detail.button7" (click)="changeType('reti')">Retinografía</button>
+                <button type="submit" [disabled]="!availableButtons.angi" class="btn" [ngClass]="(!availableButtons.angi) ? 'btn-default' : 'btn-primary'"
+                    jhiTranslate="history.detail.button8" (click)="changeType('angi')">Angiografía</button>
+                <button type="submit" [disabled]="!availableButtons.conta" class="btn" [ngClass]="(!availableButtons.conta) ? 'btn-default' : 'btn-primary'"
+                    jhiTranslate="history.detail.button9" (click)="changeType('conta')">Contaje Células</button>
+                <button type="submit" [disabled]="!availableButtons.bio" class="btn" [ngClass]="(!availableButtons.bio) ? 'btn-default' : 'btn-primary'"
+                    jhiTranslate="history.detail.button10" (click)="changeType('bio')">Biometrías</button>
+                <button type="submit" [disabled]="!availableButtons.polo" class="btn" [ngClass]="(!availableButtons.polo) ? 'btn-default' : 'btn-primary'"
+                    jhiTranslate="history.detail.button11" (click)="changeType('polo')">Polo Anterior</button>
+                <button type="submit" [disabled]="!availableButtons.paqui" class="btn" [ngClass]="(!availableButtons.paqui) ? 'btn-default' : 'btn-primary'"
+                    jhiTranslate="history.detail.button12" (click)="changeType('paqui')">Paquimetría</button>
+            </div>
+        </div>
+        <div>
+            <div class="right-div">
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr class="no-selected">
+                                <th>
+                                    <span jhiTranslate="history.patients.visit">Visita</span>
+                                </th>
+                                <th>
+                                    <span jhiTranslate="history.patients.date">Fecha</span>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <ng-container *ngFor="let h of (detail); let i = index; trackBy: historial">
+                                <tr *ngIf="hasType(h)" (click)="changeVisit(h.visita)" [ngClass]="(h.visita===currentUserDetail.visita)?'selected':''">
+                                    <td>{{h.visita}}</td>
+                                    <td>{{h.fecha}}</td>
+                                </tr>
+                            </ng-container>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="left-div">
+                <div class="w100">
+                    <ng-container *ngFor="let i of (images) | orderBy: 'creationDate'; let index = index;">
+                        <div class="img-container">
+                            <img [src]="'data:image/png;base64,' + i.data" alt="index" (click)="imageSelect(i.data)">
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

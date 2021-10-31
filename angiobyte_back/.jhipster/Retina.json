@@ -1,0 +1,696 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "historial",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "visita",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "diagangio",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "diagoft",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fecha",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "notas",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r3",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r4",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r5",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r6",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r7",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r8",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r9",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r10",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r11",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r12",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r13",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r14",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r15",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r16",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r17",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r18",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r19",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r20",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r21",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r22",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r23",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r24",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r25",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r26",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r27",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r28",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r29",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r30",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r31",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r32",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r33",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r34",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r35",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r36",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r37",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r38",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r39",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r40",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r41",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r42",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r43",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r44",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r45",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r46",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r47",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r48",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r49",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r50",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r51",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r52",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r53",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r54",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r55",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i1",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i2",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i3",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i4",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i5",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i6",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i7",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i8",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i9",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i10",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i11",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i12",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i13",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i14",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i15",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i16",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i17",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i18",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i19",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i20",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i21",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i22",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i23",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i24",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i25",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i26",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i27",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i28",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i29",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i30",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i31",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i32",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i33",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i34",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i35",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i36",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i37",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i38",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i39",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i40",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i41",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i42",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i43",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i44",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i45",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i46",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i47",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i48",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i49",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i50",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i51",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i52",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i53",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i54",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i55",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "doctor",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "80"
+        },
+        {
+            "fieldName": "r56",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r57",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r58",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r59",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r60",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r61",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r62",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r63",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "r64",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i56",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i57",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i58",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i59",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i60",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i61",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i62",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i63",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i64",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "horaini",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "ultimoidxod",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "ultimoidxoi",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "tipovisita",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "campi",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "topo",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "octp",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "octa",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "reti",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "angi",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "conta",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "bio",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "polo",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "paqui",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "otra1",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "otra2",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "otra3",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "otra4",
+            "fieldType": "Boolean",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "nuhsa",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        },
+        {
+            "fieldName": "hosp",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "50"
+        }
+    ],
+    "changelogDate": "20171021191601",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "retina",
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}

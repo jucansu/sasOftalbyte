@@ -1,0 +1,143 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "historial",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "80"
+        },
+        {
+            "fieldName": "visita",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "direccion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "100"
+        },
+        {
+            "fieldName": "fechanac",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "fecha",
+            "fieldType": "LocalDate"
+        },
+        {
+            "fieldName": "notas",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ciudad",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "80"
+        },
+        {
+            "fieldName": "procedencia",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "80"
+        },
+        {
+            "fieldName": "profesion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "80"
+        },
+        {
+            "fieldName": "antecedentes",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "250"
+        },
+        {
+            "fieldName": "i5",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i6",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i7",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i8",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i9",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i10",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i11",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i12",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i13",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i14",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i15",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "i16",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "imaginet",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "nuhsa",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20171004173806",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "angio",
+    "jpaMetamodelFiltering": false,
+    "pagination": "pagination"
+}
