@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Resolve, ActivatedRouteSnapshot, RouterStateSnapshot, Routes, CanActivate,ActivatedRoute } from '@angular/router';
 import { NgbActiveModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { JhiEventManager } from 'ng-jhipster';
 import { JhiLanguageHelper, User, UserService, HistoryService } from '../../shared';
@@ -33,13 +33,19 @@ export class HistoryDetailComponent implements OnInit {
 
     constructor(
         private route: ActivatedRoute,
-        private historyService: HistoryService
+        private historyService: HistoryService,
+       
     ) { }
 
     ngOnInit() {
+      /*  let  route: ActivatedRouteSnapshot; */
         this.routeSub = this.route.params.subscribe((params) => {
             this.loadData(params['id']);
         });
+       /*  this.route.queryParams.subscribe((params) => {
+            this.loadData(this.route2.queryParams['id']);
+        }); */
+      /*   this.loadData(route.queryParams['id']); */
 
     }
 

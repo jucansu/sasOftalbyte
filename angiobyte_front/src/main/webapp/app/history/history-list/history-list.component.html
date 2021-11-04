@@ -51,7 +51,12 @@
                     <td>{{h.fecha}}</td>
                     <td>{{h.doctor}}</td>
                     <td>{{h.visita}}</td>
-                    <td align="center"><button type="submit" class="btn btn-primary" [routerLink]="['../nuhsa', h.nuhsa, 'detail']" jhiTranslate="history.more_button">Más</button></td>
+                    <td align="center"><button type="submit" class="btn btn-primary" [routerLink]="['../nuhsa/idpaciente/', h.nuhsa]" jhiTranslate="history.more_button">Más</button></td>
+               
+                 <!--    <td align="center"><button type="submit" class="btn btn-primary" [routerLink]="['../nuhsa', h.nuhsa, 'detail']" jhiTranslate="history.more_button">Más</button></td> -->
+                 <!-- <td align="center"><button type="button" class="btn btn-primary" (click)="transition()" jhiTranslate="history.more_button">Más</button></td>
+                  -->
+                 
                 </tr>
             </tbody>
         </table>

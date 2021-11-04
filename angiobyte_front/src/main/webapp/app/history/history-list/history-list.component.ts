@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { JhiEventManager } from 'ng-jhipster';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import { Account, LoginModalService, Principal, HistoryService } from '../../shared';
 
@@ -20,7 +21,7 @@ export class HistoryListComponent implements OnInit {
     nuhsa_id: number;
     filter: string;
     constructor(
-        private historyService: HistoryService
+        private historyService: HistoryService,private router: Router
     ) {
         this.totalItems = 10000;
         this.itemsPerPage = 100;
@@ -36,5 +37,15 @@ export class HistoryListComponent implements OnInit {
         this.historyService.find({ page: this.page, size: this.itemsPerPage }).subscribe((history) => {
             this.history = history.json;
         });
+    }
+
+    transition() {
+        this.router.navigate(['/nuhsa/detail'], {
+            queryParams: {
+                id: this.nuhsa_id,
+               
+            }
+        });
+        
     }
 }
