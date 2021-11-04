@@ -16,7 +16,7 @@
                     </th>
                     <th>
                         <button type="submit" class="btn" [ngClass]="(!nuhsa_id) ? 'btn-default' : 'btn-primary'" [disabled]="!nuhsa_id"
-                        [routerLink]="['../nuhsa', nuhsa_id, 'detail']"  jhiTranslate="history.nuhsa_search_button">Search</button>
+                        [routerLink]="['../nuhsa/idpaciente/', nuhsa_id]"  jhiTranslate="history.nuhsa_search_button">Search</button>
                     </th>
                 </tr>
             </table>

@@ -2,7 +2,7 @@ import { Route } from '@angular/router';
 import { ImagesManagementComponent } from './images-management.component';
 
 export const imagesManagementRoute: Route = {
-    path: 'nuhsa/:id/images/:type',
+    path: 'nuhsa/idpaciente/:id/images/:type',
     component: ImagesManagementComponent,
     data: {
         authorities: [],
