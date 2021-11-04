@@ -2,6 +2,10 @@
 
 Para arrancar el front en local:
 
+- yarn start
+
+Compilandolo:
+
 - yarn run webpack:build:main (para compilarlo)
 
 - cd build/www/
