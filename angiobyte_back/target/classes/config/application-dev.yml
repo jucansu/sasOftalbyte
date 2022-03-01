@@ -34,7 +34,7 @@ spring:
         serialization.indent_output: true
     datasource:
         type: com.zaxxer.hikari.HikariDataSource
-        url: jdbc:sqlserver://localhost:1433;database=Angiocid
+        url: jdbc:sqlserver://localhost:1433;database=AngiocidHVRS
         username: SA
         password: madshy
         hikari:
