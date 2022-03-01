@@ -20,13 +20,17 @@ export class HistoryListComponent implements OnInit {
     itemsPerPage: any;
     nuhsa_id: number;
     filter: string;
+    loaded: Boolean;
+
     constructor(
         private historyService: HistoryService,private router: Router
     ) {
+        console.log('ENTRA')
         this.totalItems = 10000;
         this.itemsPerPage = 100;
         this.page = 0;
         this.filter = '';
+        this.loaded = false;
     }
 
     ngOnInit() {
@@ -36,16 +40,11 @@ export class HistoryListComponent implements OnInit {
     loadData() {
         this.historyService.find({ page: this.page, size: this.itemsPerPage }).subscribe((history) => {
             this.history = history.json;
+            if(this.history){
+                this.loaded = true
+            }
         });
     }
 
-    transition() {
-        this.router.navigate(['/nuhsa/detail'], {
-            queryParams: {
-                id: this.nuhsa_id,
-               
-            }
-        });
-        
-    }
+ 
 }

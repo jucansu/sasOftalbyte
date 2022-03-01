@@ -33,8 +33,8 @@ import {
 @NgModule({
     imports: [
         AngiobyteSharedModule,
-        RouterModule.forRoot(adminState, { useHash: true }),
-        /* jhipster-needle-add-admin-module - JHipster will add admin modules here */
+        RouterModule.forRoot(adminState),
+        /* , { useHash: true }jhipster-needle-add-admin-module - JHipster will add admin modules here */
     ],
     declarations: [
         AuditsComponent,

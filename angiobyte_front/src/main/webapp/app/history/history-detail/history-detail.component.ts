@@ -13,6 +13,7 @@ import { forEach } from '@angular/router/src/utils/collection';
     ]
 })
 export class HistoryDetailComponent implements OnInit {
+    loaded: Boolean;
     routeSub: any;
     user: User;
     detail: any;
@@ -35,13 +36,16 @@ export class HistoryDetailComponent implements OnInit {
         private route: ActivatedRoute,
         private historyService: HistoryService,
        
-    ) { }
+    ) {
+        this.loaded = false;
+     }
 
     ngOnInit() {
       /*  let  route: ActivatedRouteSnapshot; */
-        this.routeSub = this.route.params.subscribe((params) => {
-            this.loadData(params['id']);
+        this.routeSub = this.route.queryParams.subscribe((params) => {
+            this.loadData(params['nuhsa']);
         });
+        
        /*  this.route.queryParams.subscribe((params) => {
             this.loadData(this.route2.queryParams['id']);
         }); */
@@ -100,6 +104,9 @@ export class HistoryDetailComponent implements OnInit {
             this.detail = retina.json;
             this.currentUserDetail = this.detail[0]
             this.updateCurrentUserDetail()
+            if(retina){
+                this.loaded = true;
+            }
         });
     }
 }

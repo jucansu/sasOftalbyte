@@ -9,6 +9,7 @@ import { HOME_ROUTE, HomeComponent } from './';
     imports: [
         AngiobyteSharedModule,
         RouterModule.forRoot([ HOME_ROUTE ], { useHash: true })
+        /*, { useHash: true } */
     ],
     declarations: [
         HomeComponent,

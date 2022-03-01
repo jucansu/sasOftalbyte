@@ -17,8 +17,9 @@ import {
 @NgModule({
     imports: [
         AngiobyteSharedModule,
-        RouterModule.forRoot(historyListState, { useHash: true }),
+        RouterModule.forRoot(historyListState),
         OrderModule
+        /*, { useHash: true } */
     ],
     declarations: [
         HistoryListComponent,

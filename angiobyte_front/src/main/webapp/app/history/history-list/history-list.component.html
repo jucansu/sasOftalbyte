@@ -3,8 +3,15 @@
         <span *ngIf="h">{{h.nombre}}</span>
     </li>
 </ol> -->
+<div class="outter_modal" *ngIf="!loaded">
+    <div class="spinner_modal">
+        <div class="spinner">
+            <img src="../../../content/images/spinner.gif" />
+        </div>
+    </div>
+</div>
 
-<div>
+<div *ngIf="loaded">
     <h2>
         <span jhiTranslate="history.title">Users</span>
         <div class=" float-right">
@@ -16,7 +23,7 @@
                     </th>
                     <th>
                         <button type="submit" class="btn" [ngClass]="(!nuhsa_id) ? 'btn-default' : 'btn-primary'" [disabled]="!nuhsa_id"
-                        [routerLink]="['../nuhsa/idpaciente/', nuhsa_id]"  jhiTranslate="history.nuhsa_search_button">Search</button>
+                        [routerLink]="['../nuhsa/detail']" [queryParams]="{nuhsa: nuhsa_id}"  jhiTranslate="history.nuhsa_search_button">Search</button>
                     </th>
                 </tr>
             </table>
@@ -51,9 +58,9 @@
                     <td>{{h.fecha}}</td>
                     <td>{{h.doctor}}</td>
                     <td>{{h.visita}}</td>
-                    <td align="center"><button type="submit" class="btn btn-primary" [routerLink]="['../nuhsa/idpaciente/', h.nuhsa]" jhiTranslate="history.more_button">Más</button></td>
+                    <td align="center"><button type="submit" class="btn btn-primary" [routerLink]="['../nuhsa/detail']" [queryParams]="{nuhsa: h.nuhsa}" jhiTranslate="history.more_button">Más</button></td>
                
-                 <!--    <td align="center"><button type="submit" class="btn btn-primary" [routerLink]="['../nuhsa', h.nuhsa, 'detail']" jhiTranslate="history.more_button">Más</button></td> -->
+                 <!--     <td align="center"><button type="submit" class="btn btn-primary" [routerLink]="['../nuhsa', h.nuhsa, 'detail']" jhiTranslate="history.more_button">Más</button></td> -->
                  <!-- <td align="center"><button type="button" class="btn btn-primary" (click)="transition()" jhiTranslate="history.more_button">Más</button></td>
                   -->
                  

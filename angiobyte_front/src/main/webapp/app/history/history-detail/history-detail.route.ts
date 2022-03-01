@@ -3,8 +3,8 @@ import { HistoryDetailComponent } from './history-detail.component';
 
 
 export const historyDetailRoute: Route = {
-    path: 'nuhsa/idpaciente/:id',
-    component: HistoryDetailComponent,
+    path: 'nuhsa/detail',
+    component: HistoryDetailComponent, 
     data: {
         authorities: [],
         pageTitle: 'history.detail.title'

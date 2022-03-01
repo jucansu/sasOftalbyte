@@ -22,7 +22,8 @@ import {
 @NgModule({
     imports: [
         AngiobyteSharedModule,
-        RouterModule.forRoot(accountState, { useHash: true })
+        RouterModule.forRoot(accountState)
+        /* , { useHash: true }*/
     ],
     declarations: [
         ActivateComponent,

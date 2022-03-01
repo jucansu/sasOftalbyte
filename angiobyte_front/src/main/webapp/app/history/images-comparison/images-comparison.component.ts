@@ -64,10 +64,13 @@ export class ImagesComparisonComponent implements OnInit {
     }
 
     ngOnInit() {
+        this.route.queryParams.subscribe((params) => {
+            this.id = params['nuhsa'];
+            this.loadData(params['nuhsa']);
+        })
+
         this.routeSub = this.route.params.subscribe((params) => {
-            this.id = params['id'];
             this.type = params['type'];
-            this.loadData(params['id']);
         });
         this.availableButtons = {
             campi: null,

@@ -10,6 +10,8 @@ import { AngiobyteHistoryModule } from './history/history.module';
 import { AngiobyteAdminModule } from './admin/admin.module';
 import { AngiobyteAccountModule } from './account/account.module';
 import { AngiobyteEntityModule } from './entities/entity.module';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+
 
 import { customHttpProvider } from './blocks/interceptor/http.provider';
 import { PaginationConfig } from './blocks/config/uib-pagination.config';
@@ -49,6 +51,7 @@ import {
         FooterComponent
     ],
     providers: [
+        {provide: LocationStrategy, useClass: HashLocationStrategy},
         ProfileService,
         customHttpProvider(),
         PaginationConfig,

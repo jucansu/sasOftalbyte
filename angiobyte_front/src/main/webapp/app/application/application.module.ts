@@ -8,7 +8,7 @@ import { APPLICATION_ROUTE, ApplicationComponent } from './';
 @NgModule({
     imports: [
         AngiobyteSharedModule,
-        RouterModule.forRoot([APPLICATION_ROUTE], { useHash: true })
+        RouterModule.forRoot([APPLICATION_ROUTE], { useHash: false })
     ],
     declarations: [
         ApplicationComponent,
