@@ -66,6 +66,13 @@ public class AngioServiceImpl implements AngioService{
     
     @Override
     @Transactional(readOnly = true)
+    public Angio findByNuhsa(String id) {
+        log.debug("Request to get Angio : {}", id);
+        return angioRepository.findByNuhsa(id);
+    }
+    
+    @Override
+    @Transactional(readOnly = true)
     public int count() {
         return angioRepository.findAll().size();
     }

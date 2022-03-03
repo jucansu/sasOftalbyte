@@ -111,9 +111,9 @@ public class AngioResource {
      */
     @GetMapping("/angios/{id}")
     @Timed
-    public ResponseEntity<Angio> getAngio(@PathVariable Integer id) {
+    public ResponseEntity<Angio> getAngio(@PathVariable String id) {
         log.debug("REST request to get Angio : {}", id);
-        Angio angio = angioService.findOne(id);
+        Angio angio = angioService.findByNuhsa(id);
         return ResponseUtil.wrapOrNotFound(Optional.ofNullable(angio));
     }
     

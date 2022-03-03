@@ -101,10 +101,10 @@ public class RetinaResource {
      */
     @GetMapping("/retinas/{id}")
     @Timed
-    public ResponseEntity<List<Retina>> getRetina(@PathVariable Integer id) {
+    public ResponseEntity<List<Retina>> getRetina(@PathVariable String id) {
         log.debug("REST request to get Retina : {}", id);
-		Angio angio = angioService.findOne(id);
-		Integer historial = null;
+		Angio angio = angioService.findByNuhsa(id);
+		Long historial = null;
 		historial = angio.getHistorial();
         List<Retina> retina = retinaService.findByHistorial(historial);
         return ResponseUtil.wrapOrNotFound(Optional.ofNullable(retina));

@@ -13,4 +13,5 @@ import org.springframework.data.jpa.repository.*;
 @Repository
 public interface AngioRepository extends JpaRepository<Angio, Integer> {
 
+public Angio findByNuhsa(String nuhsa);
 }

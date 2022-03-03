@@ -39,7 +39,7 @@ public interface RetinaService {
     void delete(Integer id);
 
 
-	List<Retina> findByHistorial(Integer id);
+	List<Retina> findByHistorial(Long id);
 
 	List<Retina> findByNuhsa(String id);
 }

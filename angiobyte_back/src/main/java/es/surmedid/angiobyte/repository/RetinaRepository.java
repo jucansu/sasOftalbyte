@@ -16,6 +16,6 @@ import org.springframework.data.jpa.repository.*;
 public interface RetinaRepository extends JpaRepository<Retina, Integer> {
 
 	List<Retina> findByNuhsa(String id);
-	List<Retina> findByHistorial(Integer id);
+	List<Retina> findByHistorial(Long id);
 
 }

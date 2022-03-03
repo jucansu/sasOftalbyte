@@ -12,16 +12,16 @@ public class RetinaEmbedded implements Serializable {
 	private static final long serialVersionUID = 2L;
 
 	@Column(name = "Nuhsa")
-    private Integer nuhsa;
+    private String nuhsa;
 
     @Column(name = "Visita")
     private Integer visita;
 
-	public Integer getNuhsa() {
+	public String getNuhsa() {
 		return nuhsa;
 	}
 
-	public void setNuhsa(Integer nuhsa) {
+	public void setNuhsa(String nuhsa) {
 		this.nuhsa = nuhsa;
 	}
 

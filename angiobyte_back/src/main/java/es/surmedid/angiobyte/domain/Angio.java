@@ -17,7 +17,7 @@ public class Angio implements Serializable {
     private static final long serialVersionUID = 1L;
 
     @Column(name = "historial", nullable = false)
-    private Integer historial;
+    private Long historial;
 
     @NotNull
     @Size(max = 80)
@@ -101,18 +101,18 @@ public class Angio implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "sequenceGenerator")
     @SequenceGenerator(name = "sequenceGenerator")
     @Column(name = "nuhsa")
-    private Integer nuhsa;
+    private String nuhsa;
 
-    public Integer getHistorial() {
+    public Long getHistorial() {
         return historial;
     }
 
-    public Angio historial(Integer historial) {
+    public Angio historial(Long historial) {
         this.historial = historial;
         return this;
     }
 
-    public void setHistorial(Integer historial) {
+    public void setHistorial(Long historial) {
         this.historial = historial;
     }
 
@@ -415,16 +415,16 @@ public class Angio implements Serializable {
         this.imaginet = imaginet;
     }
 
-    public Integer getNuhsa() {
+    public String getNuhsa() {
         return nuhsa;
     }
 
-    public Angio nuhsa(Integer nuhsa) {
+    public Angio nuhsa(String nuhsa) {
         this.nuhsa = nuhsa;
         return this;
     }
 
-    public void setNuhsa(Integer nuhsa) {
+    public void setNuhsa(String nuhsa) {
         this.nuhsa = nuhsa;
     }
     // jhipster-needle-entity-add-getters-setters - Jhipster will add getters and setters here, do not remove

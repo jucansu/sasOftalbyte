@@ -70,7 +70,7 @@ public class RetinaServiceImpl implements RetinaService{
      */
     @Override
     @Transactional(readOnly = true)
-    public List<Retina> findByHistorial(Integer id) {
+    public List<Retina> findByHistorial(Long id) {
         log.debug("Request to get Retina : {}", id);
         return retinaRepository.findByHistorial(id);
     }

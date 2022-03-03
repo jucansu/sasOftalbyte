@@ -22,7 +22,7 @@ public class Retina implements Serializable {
     private RetinaEmbedded id;
 
     @Column(name = "Historial")
-    private Integer historial;
+    private Long historial;
 
     @Column(name = "Nombre")
     private String nombre;
@@ -501,7 +501,7 @@ public class Retina implements Serializable {
 
     @NotNull
     @Column(name = "Nuhsa", insertable = false, updatable = false)
-    private Integer nuhsa;
+    private String nuhsa;
 
     @NotNull
     @Size(max = 50)
@@ -510,16 +510,16 @@ public class Retina implements Serializable {
 
     // jhipster-needle-entity-add-field - Jhipster will add fields here, do not remove
 
-    public Integer getHistorial() {
+    public Long getHistorial() {
         return historial;
     }
 
-    public Retina historial(Integer historial) {
+    public Retina historial(Long historial) {
         this.historial = historial;
         return this;
     }
 
-    public void setHistorial(Integer historial) {
+    public void setHistorial(Long historial) {
         this.historial = historial;
     }
 
@@ -2512,16 +2512,16 @@ public class Retina implements Serializable {
         this.otra4 = otra4;
     }
 
-    public Integer getNuhsa() {
+    public String getNuhsa() {
         return nuhsa;
     }
 
-    public Retina nuhsa(Integer nuhsa) {
+    public Retina nuhsa(String nuhsa) {
         this.nuhsa = nuhsa;
         return this;
     }
 
-    public void setNuhsa(Integer nuhsa) {
+    public void setNuhsa(String nuhsa) {
         this.nuhsa = nuhsa;
     }
 

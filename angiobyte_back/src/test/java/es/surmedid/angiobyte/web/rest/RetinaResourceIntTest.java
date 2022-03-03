@@ -40,8 +40,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest(classes = AngiobyteApp.class)
 public class RetinaResourceIntTest {
 
-    private static final Integer DEFAULT_HISTORIAL = 1;
-    private static final Integer UPDATED_HISTORIAL = 2;
+    private static final Long DEFAULT_HISTORIAL = 1L;
+    private static final Long UPDATED_HISTORIAL = 2L;
 
     private static final String DEFAULT_NOMBRE = "AAAAAAAAAA";
     private static final String UPDATED_NOMBRE = "BBBBBBBBBB";
@@ -502,8 +502,8 @@ public class RetinaResourceIntTest {
     private static final Boolean DEFAULT_OTRA_4 = false;
     private static final Boolean UPDATED_OTRA_4 = true;
 
-    private static final Integer DEFAULT_NUHSA = 1;
-    private static final Integer UPDATED_NUHSA = 2;
+    private static final String DEFAULT_NUHSA = "1";
+    private static final String UPDATED_NUHSA = "2";
 
     private static final String DEFAULT_HOSP = "AAAAAAAAAA";
     private static final String UPDATED_HOSP = "BBBBBBBBBB";
@@ -891,7 +891,7 @@ public class RetinaResourceIntTest {
         int databaseSizeBeforeCreate = retinaRepository.findAll().size();
 
         // Create the Retina with an existing ID
-        retina.setHistorial(1);
+        retina.setHistorial(1L);
 
         // An entity with an existing ID cannot be created, so this API call must fail
         restRetinaMockMvc.perform(post("/api/retinas")
@@ -1563,7 +1563,7 @@ public class RetinaResourceIntTest {
         int databaseSizeBeforeUpdate = retinaRepository.findAll().size();
 
         // Update the retina
-        Retina updatedRetina = retinaRepository.findOne(retina.getHistorial());
+        Retina updatedRetina = retinaRepository.findOne((int) (long)retina.getHistorial());
         updatedRetina
             .historial(UPDATED_HISTORIAL)
             .nombre(UPDATED_NOMBRE)
@@ -1930,11 +1930,11 @@ public class RetinaResourceIntTest {
     public void equalsVerifier() throws Exception {
         TestUtil.equalsVerifier(Retina.class);
         Retina retina1 = new Retina();
-        retina1.setHistorial(1);
+        retina1.setHistorial(1L);
         Retina retina2 = new Retina();
         retina2.setHistorial(retina1.getHistorial());
         assertThat(retina1).isEqualTo(retina2);
-        retina2.setHistorial(2);
+        retina2.setHistorial(2L);
         assertThat(retina1).isNotEqualTo(retina2);
         retina1.setHistorial(null);
         assertThat(retina1).isNotEqualTo(retina2);

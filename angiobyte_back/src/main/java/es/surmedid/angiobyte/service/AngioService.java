@@ -35,4 +35,12 @@ public interface AngioService {
 
 	int count();
 
+	/**
+	 *  Get one angio by id.
+	 *
+	 *  @param id the id of the entity
+	 *  @return the entity
+	 */
+	Angio findByNuhsa(String id);
+
 }
